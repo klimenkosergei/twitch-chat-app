@@ -1,0 +1,129 @@
+.controls {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  color: #fff;
+  width: 100%;
+
+  &__header {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  &__error {
+    display: inline-block;
+    border-radius: 6px;
+    background-color: #e91916;
+    padding: 1.4rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: repeat(3, max-content);
+    gap: 2rem;
+  }
+
+  &__label {
+    display: block;
+    font-size: 1.2rem;
+    color: #adadb8;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input {
+    padding: 1rem;
+    background-color: #18181b;
+    border-radius: var(--border-radius-medium);
+    border: 2px solid #18181b;
+    color: inherit;
+    font-size: 1.4rem;
+
+    transition: border-color 0.15s;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked ~ &__button::after {
+    left: 3rem;
+  }
+
+  &__checkbox:checked ~ &__button {
+    background-color: var(--color-primary);
+  }
+
+  &__button {
+    position: relative;
+    height: 3rem;
+    width: 6rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3rem;
+    cursor: pointer;
+    display: block;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s;
+
+    &::before {
+      content: '';
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff;
+      display: block;
+      position: absolute;
+      height: 0.7rem;
+      width: 1.3rem;
+      left: 1rem;
+      top: 1rem;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      border-radius: 100%;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      width: 3rem;
+      height: 3rem;
+      transition: left 0.2s;
+    }
+  }
+
+  &__input-group {
+    & > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    background-color: var(--color-primary);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.8rem 0.8rem;
+    border-radius: var(--border-radius-medium);
+    transition: background-color 0.15s;
+
+    &:hover {
+      background-color: var(--color-secondary);
+    }
+  }
+
+  &__submit {
+    padding: 0.8rem 3rem;
+
+    &:disabled {
+      background-color: #ffffff26;
+      cursor: not-allowed;
+    }
+  }
+}

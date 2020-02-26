@@ -1,0 +1,62 @@
+.about {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+
+  &__header {
+    color: #efeff1;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__tech {
+    margin-bottom: 2rem;
+
+    &__label {
+      display: block;
+      font-size: 1.2rem;
+      color: #adadb8;
+      margin-bottom: 0.5rem;
+    }
+
+    &__icon {
+      fill: #efeff1;
+      width: 2.4rem;
+      height: 2.4rem;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+      &--react:hover {
+        fill: #61dafb;
+      }
+      &--redux:hover {
+        fill: #764abc;
+      }
+      &--sass:hover {
+        fill: #cc6699;
+      }
+    }
+  }
+
+  &__description {
+    &__label {
+      display: block;
+      font-size: 1.2rem;
+      color: #adadb8;
+      margin-bottom: 0.5rem;
+    }
+
+    &__content {
+      color: #efeff1;
+      font-size: 1.4rem;
+      word-wrap: break-word;
+    }
+
+    &__link {
+      color: var(--color-primary);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

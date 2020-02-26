@@ -1,0 +1,28 @@
+.nav {
+  grid-row: 1 / 2;
+  grid-column: 1 / span 3;
+
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: #efeff1;
+    font-size: 1.6rem;
+    line-height: 1;
+    text-decoration: none;
+    border: 2px solid #efeff1;
+    border-radius: 0.6rem;
+    padding: 1rem;
+  }
+
+  &__link-icon {
+    fill: #efeff1;
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 0.5rem;
+  }
+}

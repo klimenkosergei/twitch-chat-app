@@ -1,0 +1,75 @@
+// Define CSS variables
+:root {
+  --color-primary: #9147ff;
+  --color-secondary: #772ce8;
+  --color-background: #282c34;
+  --color-background-chat: #18181b;
+  --color-text-base: #efeff1;
+  --color-text-info: #adadb8;
+  --color-border-base: hsla(0, 0%, 100%, 0.1);
+
+  // Buttons
+  --color-background-button-text: transparent;
+  --color-background-button-text-hover: hsla(0, 0%, 100%, 0.15);
+
+  --border-width-default: 1px;
+  --border-radius-medium: 4px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roobert;
+  font-weight: 400;
+  src: url(https://static.twitchcdn.net/assets/Roobert-Regular-3fe213a3618624fd7b71.woff2)
+      format('woff2'),
+    url(https://static.twitchcdn.net/assets/Roobert-Regular-014ea096b0f865fa4dd9.woff)
+      format('woff');
+}
+
+@font-face {
+  font-family: Roobert;
+  font-weight: 600;
+  src: url(https://static.twitchcdn.net/assets/Roobert-SemiBold-df85158a0012c224b021.woff2)
+      format('woff2'),
+    url(https://static.twitchcdn.net/assets/Roobert-SemiBold-48a406bf82c48cfaa849.woff)
+      format('woff');
+}
+
+@font-face {
+  font-family: Roobert;
+  font-weight: 700;
+  src: url(https://static.twitchcdn.net/assets/Roobert-Bold-7fda562c82c09fbabec2.woff2)
+      format('woff2'),
+    url(https://static.twitchcdn.net/assets/Roobert-Bold-e1ed2e0bbb575f1a395b.woff)
+      format('woff');
+}
+
+html {
+  // Define 1rem = 10px
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: Roobert, Helvetica, sans-serif;
+  color: var(--color-text-base);
+}
+
+.app {
+  width: 100vw;
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  grid-template-columns: repeat(3, 34rem);
+  column-gap: 6rem;
+  row-gap: 4rem;
+  justify-content: center;
+
+  padding-top: 2rem;
+}
