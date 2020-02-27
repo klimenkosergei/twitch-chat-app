@@ -4,6 +4,17 @@
   color: #fff;
   width: 100%;
 
+  // 1200px
+  @media only screen and (max-width: 75em) {
+    grid-column: 2 / 3;
+  }
+
+  // 800px
+  @media only screen and (max-width: 50em) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
   &__header {
     margin-bottom: 2rem;
     font-size: 2rem;

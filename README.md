@@ -1,6 +1,6 @@
 # Twitch Chat App
 
-### Live версия доступна на [sergeyklimenko.com/projects/twitch-chat](https://sergeyklimenko.com/projects/twitch-chat)
+### 📌Live версия доступна на [sergeyklimenko.com/projects/twitch-chat](https://sergeyklimenko.com/projects/twitch-chat)
 
 #### Приложение чата аналогичное чату на сайте [Twitch.tv](https://twitch.tv).
 

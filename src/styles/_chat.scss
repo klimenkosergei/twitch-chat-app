@@ -5,6 +5,11 @@
   background: var(--color-background-chat);
   border: var(--border-width-default) solid var(--color-border-base);
 
+  // 1200px
+  @media only screen and (max-width: 75em) {
+    grid-column: 1 / 2;
+  }
+
   &__header {
     height: 5rem;
     display: grid;
@@ -55,6 +60,11 @@
   &__body {
     position: relative;
     height: 65rem;
+
+    // 450px
+    @media only screen and (max-width: 28.125em) {
+      height: 30rem;
+    }
   }
 
   &__scroll {

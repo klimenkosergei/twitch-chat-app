@@ -65,5 +65,17 @@ body {
   row-gap: 4rem;
   justify-content: center;
 
-  padding-top: 2rem;
+  padding: 2rem;
+
+  // 1200px
+  @media only screen and (max-width: 75em) {
+    grid-template-columns: repeat(2, 34rem);
+    grid-template-rows: repeat(3, max-content);
+  }
+
+  // 800px
+  @media only screen and (max-width: 50em) {
+    grid-template-columns: minmax(min-content, 34rem);
+    grid-template-rows: repeat(4, max-content);
+  }
 }
