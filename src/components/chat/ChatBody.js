@@ -18,7 +18,7 @@ const ChatBody = ({ chat, openConnection, joinChat }) => {
   // Auto scroll view when messages post or auto scroll renabled
   useEffect(() => {
     if (autoScroll) {
-      messagesEndRef.current.scrollIntoView({ block: 'nearest' });
+      chatBody.current.scrollTop = chatBody.current.children[0].offsetHeight;
     }
   }, [chatMessages, autoScroll]);
 
