@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import SimpleBar from 'simplebar-react';
-import 'simplebar/dist/simplebar.min.css';
+import 'simplebar-react/dist/simplebar.min.css';
 import PropTypes from 'prop-types';
 
 import { openConnection, joinChat } from '../../actions/chat';
@@ -48,13 +48,13 @@ const ChatBody = ({ chat, openConnection, joinChat }) => {
 
   useEffect(() => {
     const theme = themeColors[chat.theme];
-    Object.keys(theme).forEach(key => {
+    Object.keys(theme).forEach((key) => {
       const value = theme[key];
       document.documentElement.style.setProperty(key, value);
     });
   }, [chat.theme]);
 
-  const onScroll = e => {
+  const onScroll = (e) => {
     const scrollableHeight = e.target.scrollTop + 650;
     const scrollableBody = e.target.children[0].offsetHeight;
     if (scrollableBody - scrollableHeight > 250) {
@@ -75,7 +75,7 @@ const ChatBody = ({ chat, openConnection, joinChat }) => {
         style={{ height: '100%' }}
         scrollableNodeProps={{ ref: chatBody }}
       >
-        {chatMessages.map(message => (
+        {chatMessages.map((message) => (
           <ChatMessage
             key={message.id}
             chatMessage={message}
@@ -98,13 +98,13 @@ const ChatBody = ({ chat, openConnection, joinChat }) => {
 ChatBody.propTypes = {
   chat: PropTypes.object.isRequired,
   openConnection: PropTypes.func.isRequired,
-  joinChat: PropTypes.func.isRequired
+  joinChat: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({ chat: state });
+const mapStateToProps = (state) => ({ chat: state });
 const ConnectedChatBody = connect(mapStateToProps, {
   openConnection,
-  joinChat
+  joinChat,
 })(ChatBody);
 
 export { ChatBody, ConnectedChatBody as default };
