@@ -4,7 +4,7 @@ const About = () => (
   <div className='about'>
     <h1 className='about__header'>About</h1>
     <div className='about__tech'>
-      <div className='about__tech__label'>Технологии</div>
+      <div className='about__tech__label'>Tech stack</div>
       <div className='about__tech__icons'>
         <svg className='about__tech__icon about__tech__icon--react'>
           <use href='/img/sprite.svg#react'></use>
@@ -20,8 +20,8 @@ const About = () => (
     <div className='about__description'>
       <div className='about__description__label'>Описание</div>
       <p className='about__description__content'>
-        Идея приложения заключалась в том, чтобы реализовать чат аналогичный
-        чату на сайте{' '}
+        The idea of this app was to create a chat similar to the one you can
+        find on{' '}
         <a
           href='https://twitch.tv'
           target='_blank'
@@ -31,16 +31,17 @@ const About = () => (
           Twitch.tv
         </a>
         <br />
-        <br />В проекте использовались React, Redux и Sass. Справа от чата
-        находятся: опция изменения цветовой схемы, и присоединение к чату
-        заданного канала. Нажатие на кнопку "Random" выбирает случайный топ-10
-        канал с Twitch API.
+        <br />
+        In this project I've used React, Redux and Sass. On the right from the
+        chat there are options to change color theme, and join a chat of a
+        specific channel. Clicking on the "Random" button selects a random
+        twitch channel from Top-10 live at that moment.
         <br />
         <br />
-        Работа чата происходит через Websocket. По умолчанию сообщения чата
-        автоматически прокручиваются. Это можно отменить скроллингом. Для
-        возобновления автоматического скроллинга можно либо прокрутить чат до
-        конца, либо нажать кнопку "Resume Auto-Scroll".
+        The chat works through Websocket. By default chat auto scrolls. That can
+        be cancelled by scrolling manually. To resume auto-scroll you can either
+        scroll the chat back to the beginning or click "Resume Auto-Scroll"
+        button.
       </p>
     </div>
   </div>

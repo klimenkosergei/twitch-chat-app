@@ -1,21 +1,21 @@
 # Twitch Chat App
 
-### 📌Live версия доступна на [sergeyklimenko.com/projects/twitch-chat](https://sergeyklimenko.com/projects/twitch-chat)
+### 📌 Live version available on [sergeyklimenko.com/projects/twitch-chat](https://sergeyklimenko.com/projects/twitch-chat)
 
-#### Приложение чата аналогичное чату каналов на сайте [Twitch.tv](https://twitch.tv).
+#### Chat app inspired by chats on [Twitch.tv](https://twitch.tv).
 
-#### В проекте использовались: React, Redux, Sass, Twitch API.
+#### Tech stack: React, Redux, Sass, Twitch API.
 
-Подключение к чату происходит через Websocket. Информация о канале, emojis и badges доступны через [Twitch API](https://dev.twitch.tv/docs/).
+Chat works through Websocket. Channel info, emojis and badges are pulled frm [Twitch API](https://dev.twitch.tv/docs/).
 
-Для запуска проекта:
+To run the project:
 
 ```javascript
-npm start
+yarn start
 ```
 
-Для компиляции проекта:
+To build the project:
 
 ```javascript
-npm start
+yarn run build
 ```
