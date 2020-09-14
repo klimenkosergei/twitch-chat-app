@@ -11,7 +11,7 @@ const ChatControls = ({ chat, setChatChannel, setChatTheme, leaveChat }) => {
     chat.theme === 'dark' ? setChatTheme('light') : setChatTheme('dark');
   };
 
-  const onChannelInput = e => {
+  const onChannelInput = (e) => {
     setChannel(e.target.value.toLowerCase());
   };
 
@@ -19,24 +19,24 @@ const ChatControls = ({ chat, setChatChannel, setChatTheme, leaveChat }) => {
   const onGetRandomChannel = async () => {
     try {
       const res = await fetch(
-        'https://api.twitch.tv/helix/streams?first=10&language=en',
+        'https://api.twitch.tv/kraken/streams?limit=11&language=en',
         {
-          method: 'GET',
           headers: {
-            'Client-ID': 'j46qoylsjcttr5w0ytzq96pyrtuqyd'
-          }
+            'Client-ID': 'j46qoylsjcttr5w0ytzq96pyrtuqyd',
+            accept: 'application/vnd.twitchtv.v5+json',
+          },
         }
       );
       const data = await res.json();
       const randomNumber = Math.floor(Math.random() * 10);
-      const channel = data.data[randomNumber]['user_name'];
+      const channel = data.streams[randomNumber].channel.name;
       setChannel(channel.toLowerCase());
     } catch (err) {
       console.error(err);
     }
   };
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     if (chat.channel !== channel && channel !== '') {
       leaveChat(chat.channel);
@@ -101,15 +101,15 @@ ChatControls.propTypes = {
   chat: PropTypes.object.isRequired,
   setChatChannel: PropTypes.func.isRequired,
   setChatTheme: PropTypes.func.isRequired,
-  leaveChat: PropTypes.func.isRequired
+  leaveChat: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({ chat: state });
+const mapStateToProps = (state) => ({ chat: state });
 
 const ConnectedChatControls = connect(mapStateToProps, {
   leaveChat,
   setChatChannel,
-  setChatTheme
+  setChatTheme,
 })(ChatControls);
 
 export { ChatControls, ConnectedChatControls as default };
