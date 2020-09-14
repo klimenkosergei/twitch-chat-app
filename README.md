@@ -1,6 +1,6 @@
 # Twitch Chat App
 
-### 📌 Live version available on [sergeyklimenko.com/projects/twitch-chat](https://sergeyklimenko.com/projects/twitch-chat)
+### 📌 Live version available on [twitch-chat-app.netlify.app](https://twitch-chat-app.netlify.app)
 
 #### Chat app inspired by chats on [Twitch.tv](https://twitch.tv).
 
